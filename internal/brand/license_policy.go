@@ -86,9 +86,3 @@ func ValidateLicenseTransfer(license BrandLicense, currentOwner, proposedOwner s
 	}
 	return nil
 }
-
-func logoReviewSnapshot(store StoreProfile) StoreProfile {
-	clone := store
-	clone.DisplayedLogoVersion = clone.ApprovedLogoVersion - 1
-	return clone
-}

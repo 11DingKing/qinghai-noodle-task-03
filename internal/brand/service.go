@@ -24,8 +24,6 @@ func (s *Service) CheckThreeStoreModel(_ context.Context, store StoreProfile) er
 }
 
 func (s *Service) CheckLogo(_ context.Context, license BrandLicense, store StoreProfile) error {
-	store = logoReviewSnapshot(store)
-
 	return ValidateLogoVersion(license, store)
 }
 
